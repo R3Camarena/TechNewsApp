@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct DetailView: View {
+    
+    let url: String?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        WebView(urlString: url) // UIKit component converted to SwiftUI
     }
 }
 
 #Preview {
-    DetailView()
+    DetailView(url: "https://www.apple.com")
 }

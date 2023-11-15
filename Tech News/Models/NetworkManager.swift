@@ -7,7 +7,10 @@
 
 import Foundation
 
-class NetworkManager {
+// ObservableObject to publish certain propoerties to update the UI by listening to updates from the API
+class NetworkManager: ObservableObject {
+    
+    @Published var posts = [Post]()
     
     func fetchData() {
         if let url = URL(string: "http://hn.algolia.com/api/v1/search?tags=front_page") {
@@ -17,7 +20,10 @@ class NetworkManager {
                     let decoder = JSONDecoder()
                     if let safeData = data {
                         do {
-                            try decoder.decode(Results.self, from: safeData)
+                            let results = try decoder.decode(Results.self, from: safeData)
+                            DispatchQueue.main.async {
+                                self.posts = results.hits
+                            }
                         } catch {
                             print(error)
                         }

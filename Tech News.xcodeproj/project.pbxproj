@@ -13,6 +13,8 @@
 		CF05097C2B0437FA004EBB52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF05097B2B0437FA004EBB52 /* Preview Assets.xcassets */; };
 		CF0509842B043B0E004EBB52 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0509832B043B0E004EBB52 /* NetworkManager.swift */; };
 		CF0509862B043CBA004EBB52 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0509852B043CBA004EBB52 /* PostData.swift */; };
+		CF228C782B05390C00FEF629 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF228C772B05390C00FEF629 /* DetailView.swift */; };
+		CF228C7A2B053EFC00FEF629 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF228C792B053EFC00FEF629 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,9 @@
 		CF05097B2B0437FA004EBB52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF0509832B043B0E004EBB52 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CF0509852B043CBA004EBB52 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		CF228C772B05390C00FEF629 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		CF228C792B053EFC00FEF629 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		CF228C7B2B05421900FEF629 /* Tech News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tech News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +60,10 @@
 		CF0509732B0437F4004EBB52 /* Tech News */ = {
 			isa = PBXGroup;
 			children = (
+				CF228C7B2B05421900FEF629 /* Tech News.entitlements */,
 				CF0509822B043B00004EBB52 /* Models */,
 				CF0509742B0437F4004EBB52 /* Tech_NewsApp.swift */,
-				CF0509762B0437F4004EBB52 /* ContentView.swift */,
+				CF228C762B0538F700FEF629 /* Views */,
 				CF0509782B0437FA004EBB52 /* Assets.xcassets */,
 				CF05097A2B0437FA004EBB52 /* Preview Content */,
 			);
@@ -79,6 +85,16 @@
 				CF0509852B043CBA004EBB52 /* PostData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CF228C762B0538F700FEF629 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF0509762B0437F4004EBB52 /* ContentView.swift */,
+				CF228C772B05390C00FEF629 /* DetailView.swift */,
+				CF228C792B053EFC00FEF629 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +170,8 @@
 				CF0509842B043B0E004EBB52 /* NetworkManager.swift in Sources */,
 				CF0509862B043CBA004EBB52 /* PostData.swift in Sources */,
 				CF0509772B0437F4004EBB52 /* ContentView.swift in Sources */,
+				CF228C7A2B053EFC00FEF629 /* WebView.swift in Sources */,
+				CF228C782B05390C00FEF629 /* DetailView.swift in Sources */,
 				CF0509752B0437F4004EBB52 /* Tech_NewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Tech News/Tech News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tech News/Preview Content\"";
@@ -303,6 +322,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardo-camarena.Tech-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -314,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Tech News/Tech News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tech News/Preview Content\"";
@@ -332,6 +355,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardo-camarena.Tech-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

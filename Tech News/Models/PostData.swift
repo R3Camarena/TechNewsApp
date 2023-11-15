@@ -18,5 +18,5 @@ struct Post: Decodable, Identifiable {
     let objectID: String
     let points: Int
     let title: String
-    let url: String
+    let url: String? // In the API, the url sometimes is nil, so an optional String? is needed for the results to show up
 }

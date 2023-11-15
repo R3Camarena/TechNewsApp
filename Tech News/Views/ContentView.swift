@@ -9,14 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // ObservedObject to listen to the updates of the ObservableObject class to update the UI
     @ObservedObject var networkManager = NetworkManager()
     
     var body: some View {
         NavigationView {
             List(networkManager.posts) { post in
-                HStack {
-                    Text(String(post.points))
-                    Text(post.title)
+                // Shows the DetailView() when tapping an element
+                NavigationLink(destination: DetailView(url: post.url)) {
+                    HStack {
+                        VStack {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.yellow)
+                            Text(String(post.points))
+                        }
+                        Text(post.title)
+                    }
                 }
             }
             .navigationBarTitle("Tech News")
